@@ -1,0 +1,44 @@
+.tabs {
+    @include tablet {
+        @include grid(3, 2rem);
+    }
+    button {
+        background-color: $blanco;
+        font-size: 2rem;
+        font-weight: $bold;
+        padding: 2rem 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        border: none;
+
+        &.actual{
+            background-color: $azul;
+            color: $blanco;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &:first-of-type{
+        margin-top: 1rem;
+    }
+}
+
+.application {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: $separacion/2;
+
+    .seccion {
+        display: none;
+        margin-top: $separacion/3;
+    }
+}
+
+.mostrar-seccion {
+    display: block !important;
+}
